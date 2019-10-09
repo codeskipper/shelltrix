@@ -24,4 +24,16 @@ ping() {
   fi
 }
 
+
+## Download a named file using curl, ISO 1806 timestamp before and after
+durl() {
+  if [[ "$1" == "-i" ]]; then
+    date -i
+    shift
+    command curl --remote-name "$@"
+    date -i
+  fi
+}
+
+
 #alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
