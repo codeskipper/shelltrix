@@ -1,0 +1,2 @@
+# shelltrix
+Bash/zsh resources 
