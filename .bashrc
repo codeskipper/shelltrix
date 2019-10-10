@@ -1,7 +1,7 @@
 ## Some aliases -tested with bash on macOS-
 # import using source ~/.bashrc
 
-# provide timestamps in ISO 1806 notation -I for Zulu time, -i for local
+# provide timestamps in ISO 8601 notation -I for Zulu time, -i for local
 date() {
   if [ "$1" = "-i" ]; then
     command date "+%Y-%m-%dT%H:%M:%S%z"
@@ -14,7 +14,7 @@ date() {
   fi
 }
 
-# provide timestamps in ISO 1806 notation using custom alias for date defined above
+# provide timestamps in ISO 8601 notation using custom alias for date defined above
 ping() {
   if [[ "$1" == "--datamind-time" ]]; then
     shift
@@ -25,7 +25,7 @@ ping() {
 }
 
 
-## Download a named file using curl, ISO 1806 timestamp before and after
+## Download a named file using curl, ISO 8601 timestamp before and after
 durl() {
   if [[ "$1" == "-i" ]]; then
     date -i
