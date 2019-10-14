@@ -27,17 +27,6 @@ ping() {
 
 ## Download a named file using curl, ISO 8601 timestamp before and after
 durl() {
-  if [[ "$1" == "-i" ]]; then
-    date -i
-    shift
-    command curl --remote-name "$@"
-    date -i
-  fi
-}
-
-
-## Download a named file using curl, ISO 8601 timestamp before and after
-durl() {
   if [[ "$1" == "-I" ]]; then
     date -I
     shift
